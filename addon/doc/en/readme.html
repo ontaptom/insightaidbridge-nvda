@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightAid Bridge - NVDA Addon Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        .shortcut {
+            background-color: #ecf0f1;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+        .note {
+            background-color: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .version {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>InsightAid Bridge <span class="version">v0.1.0</span></h1>
+        
+        <p><strong>NVDA Bridge Addon for InsightAid AI Accessibility Assistant</strong></p>
+        
+        <h2>What is InsightAid Bridge?</h2>
+        <p>InsightAid Bridge is an NVDA addon that captures webpage content and element data, on user request, for use with the InsightAid AI accessibility assistant. This bridge addon provides the NVDA integration layer, while the separate InsightAid application handles AI processing for enhanced accessibility features.</p>
+        
+        <div class="note">
+            <strong>Note:</strong> This addon captures and saves data to files only on specific user request - based on predefined shortcuts. The separate InsightAid application processes this data using local AI models to provide features like image analysis, text translation, and document summarization.
+        </div>
+        
+        <h2>Features</h2>
+        <ul>
+            <li><strong>Element Capture:</strong> Capture details about the current focused element including content, role, and location</li>
+            <li><strong>Document Analysis:</strong> Extract structured content from entire webpages with proper formatting</li>
+            <li><strong>Privacy-First:</strong> All data is stored locally on your computer</li>
+            <li><strong>AI-Ready Format:</strong> Outputs structured JSON data optimized for AI processing</li>
+        </ul>
+        
+        <h2>Keyboard Shortcuts</h2>
+        <ul>
+            <li><span class="shortcut">NVDA+I</span> - Capture current element (image, text, button, etc.)</li>
+            <li><span class="shortcut">NVDA+Shift+I</span> - Capture full document structure</li>
+        </ul>
+        
+        <h2>How to Use</h2>
+        <ol>
+            <li>Navigate to any webpage using NVDA</li>
+            <li>To analyze a specific element (image, heading, etc.), navigate to it and press <span class="shortcut">NVDA+Alt+I</span></li>
+            <li>To get a summary of the entire page, press <span class="shortcut">NVDA+Alt+D</span></li>
+            <li>You'll hear confirmation beeps when data is captured</li>
+            <li>The InsightAid application will process this captured data</li>
+        </ol>
+        
+        <h2>File Storage</h2>
+        <p>Captured data is automatically saved to:</p>
+        <ul>
+            <li><strong>Element data:</strong> <code>%appdata%\InsightAid\current_element.json</code></li>
+            <li><strong>Document data:</strong> <code>%appdata%\InsightAid\document_content.json</code></li>
+        </ul>
+        
+        <h2>Requirements</h2>
+        <ul>
+            <li>NVDA 2021.1 or later</li>
+            <li>Windows 10 or later</li>
+            <li>InsightAid application (for AI processing)</li>
+        </ul>
+        
+        <div class="warning">
+            <strong>Important:</strong> This addon only captures and saves data. To get AI-powered descriptions, translations, and analysis, you need to install the separate InsightAid application.
+        </div>
+        
+        <h2>Troubleshooting</h2>
+        <h3>Shortcuts not working?</h3>
+        <ul>
+            <li>Restart NVDA after installing the addon</li>
+            <li>Check if shortcuts conflict with other addons in NVDA Menu → Preferences → Input Gestures</li>
+            <li>Ensure you're in browse mode when using the shortcuts</li>
+        </ul>
+        
+        <h3>No confirmation beeps?</h3>
+        <ul>
+            <li>Check NVDA's audio settings</li>
+            <li>Verify the addon is enabled in NVDA Menu → Tools → Add-ons Manager</li>
+        </ul>
+        
+        <h2>Privacy</h2>
+        <p>InsightAid Bridge respects your privacy:</p>
+        <ul>
+            <li>All data is stored locally on your computer</li>
+            <li>No information is sent to external servers</li>
+            <li>You have full control over the captured data</li>
+        </ul>
+        
+        <h2>Support</h2>
+        <p>For support, feature requests, or bug reports, please visit:</p>
+        <p><a href="https://github.com/ontaptom/InsightAid">https://github.com/ontaptom/InsightAid</a></p>
+        
+        <hr>
+        <p class="version">
+            <strong>InsightAid Bridge v0.1.0</strong><br>
+            Part of the InsightAid AI Accessibility Assistant project<br>
+            Private, on-device AI accessibility assistant powered by Gemma
+        </p>
+    </div>
+</body>
+</html>
