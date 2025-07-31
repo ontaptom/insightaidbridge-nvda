@@ -99,8 +99,12 @@
         <h2>File Storage</h2>
         <p>Captured data is automatically saved to:</p>
         <ul>
-            <li><strong>Element data:</strong> <code>%appdata%\InsightAid\current_element.json</code></li>
-            <li><strong>Document data:</strong> <code>%appdata%\InsightAid\document_content.json</code></li>
+            <li><strong>Element data:</strong> <code>%USERPROFILE%\.insightaid\current_element.json</code></li>
+            <li><strong>Document data:</strong> <code>%USERPROFILE%\.insightaid\document_content.json</code></li>
+        </ul>
+        <p>Addon also creates (overwrites if it exist) a file on startup:</p>
+        <ul>
+            <li><strong>version file:</strong> <code>%USERPROFILE%\.insightaid\nvda_version.json</code></li>
         </ul>
         
         <h2>Requirements</h2>
@@ -142,7 +146,7 @@
         
         <hr>
         <p class="version">
-            <strong>InsightAid Bridge v0.1.0</strong><br>
+            <strong>InsightAid Bridge v0.1.1</strong><br>
             Part of the InsightAid AI Accessibility Assistant project<br>
             Private, on-device AI accessibility assistant powered by Gemma
         </p>

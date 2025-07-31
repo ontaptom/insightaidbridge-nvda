@@ -18,7 +18,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         
         # Configuration - easily customizable
         self.APP_NAME = "InsightAid"
-        self.DATA_FOLDER = os.path.join(os.path.expandvars(r'%appdata%'), self.APP_NAME, "input")
+        self.DATA_FOLDER = os.path.join(os.path.expanduser('~'), ".insightaid", "input")
         self.ELEMENT_FILE = "current_element.json"
         self.DOCUMENT_FILE = "document_content.json"
         self.VERSION_FILE = "nvda_version.json"
